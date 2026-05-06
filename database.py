@@ -30,6 +30,7 @@ def create_session():
     conn.close()
     return session_id
 
+
 def add_message_to_db(session_id, sender, message):
     conn = sqlite3.connect('conversations.db')
     cursor = conn.cursor()
@@ -37,6 +38,7 @@ def add_message_to_db(session_id, sender, message):
                    (session_id, sender, message))
     conn.commit()
     conn.close()
+
 
 def get_history(session_id):
     conn = sqlite3.connect('conversations.db')

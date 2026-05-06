@@ -53,6 +53,7 @@ def chat():
         db.add_message_to_db(session_id, 'bot', response_text)
         return jsonify({'response': response_text})
 
+
     history = db.get_history(session_id)
     response_prompt = prompts.get_response_prompt(history, user_query)
     bot_response = get_gemini_response(response_prompt)
