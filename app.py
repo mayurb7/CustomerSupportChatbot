@@ -6,8 +6,6 @@ import google.generativeai as genai
 import database as db
 import prompts
 
-
-
 load_dotenv() 
 app = Flask(__name__, static_folder='static')
 db.init_db()  
