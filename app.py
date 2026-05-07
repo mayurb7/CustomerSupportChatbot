@@ -8,8 +8,6 @@ import prompts
 
 load_dotenv() 
 app = Flask(__name__, static_folder='static')
-
-
 db.init_db()  
 
 api_key = os.getenv("GOOGLE_API_KEY")
